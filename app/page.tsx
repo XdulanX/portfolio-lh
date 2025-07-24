@@ -16,7 +16,7 @@ import {
   Award,
   Terminal,
   Cpu,
-  Zap,
+  Download,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -51,6 +51,17 @@ export default function Portfolio() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     element?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  // CV Download Function
+  const downloadCV = () => {
+    // Create a link element and trigger download
+    const link = document.createElement("a")
+    link.href = "/cv/Alex_Chen_CV.pdf"
+    link.download = "Alex_Chen_CV.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
@@ -160,7 +171,7 @@ export default function Portfolio() {
         <div className="absolute top-1/4 right-1/2 w-8 h-5 animate-bounce-slow" style={{ animationDelay: "8s" }}>
           <svg viewBox="0 0 24 24" className="w-full h-full text-orange-500/40">
             <path
-              d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335c-.072.048-.144.071-.2.071-.08 0-.16-.04-.239-.112-.112-.12-.207-.248-.279-.383-.072-.135-.144-.287-.2-.455-.503.592-1.135.888-1.887.888-.537 0-.967-.152-1.279-.457-.312-.304-.47-.71-.47-1.214 0-.537.19-.973.574-1.295.383-.32.894-.48 1.534-.48.214 0 .335.016.527.048.191.032.383.08.598.144v-.48c0-.5-.104-.85-.32-1.063-.215-.215-.58-.32-1.11-.32-.239 0-.487.032-.734.08-.248.048-.487.104-.718.184-.104.04-.183.064-.23.064-.08 0-.12-.056-.12-.175v-.271c0-.088.016-.16.056-.2.04-.048.112-.08.2-.112.247-.127.543-.232.886-.32.344-.087.710-.128 1.095-.128.838 0 1.454.191 1.846.574.394.384.59.966.59 1.75v2.302zm-2.592.927c.207 0 .422-.04.646-.112.224-.072.423-.2.59-.368.103-.111.175-.232.207-.36.032-.127.056-.28.056-.454v-.215c-.15-.04-.32-.072-.51-.096-.19-.023-.375-.032-.551-.032-.394 0-.686.08-.878.24-.191.159-.287.384-.287.67 0 .271.071.48.207.622.144.144.351.215.622.215zm4.846.718c-.103 0-.175-.016-.215-.056-.048-.04-.087-.12-.127-.24l-1.423-4.693c-.04-.135-.064-.224-.064-.271 0-.104.048-.16.151-.16h.622c.104 0 .175.016.215.056.048.04.08.12.112.24l1.015 4.001 .942-4.001c.032-.127.064-.2.112-.24.048-.04.12-.056.215-.056h.51c.104 0 .175.016.215.056.048.04.087.12.112.24l.95 4.049 1.047-4.049c.032-.127.072-.2.112-.24.048-.04.12-.056.215-.056h.59c.104 0 .16.048.16.16 0 .032-.008.064-.016.104-.008.04-.024.095-.048.16l-1.463 4.693c-.04.127-.08.2-.127.24-.048.04-.12.056-.215.056h-.55c-.103 0-.175-.016-.215-.056-.048-.04-.087-.12-.112-.24l-.934-3.89-.926 3.89c-.032.127-.064.2-.112.24-.048.04-.112.056-.215.056h-.55zm7.985.08c-.32 0-.646-.04-.966-.112-.32-.08-.568-.175-.75-.288-.08-.048-.135-.104-.151-.144-.016-.048-.024-.095-.024-.144v-.28c0-.12.048-.175.128-.175.048 0 .096.008.144.032.048.016.12.048.2.08.27.112.56.2.862.248.304.048.606.072.91.072.487 0 .862-.087 1.118-.264.256-.175.384-.423.384-.734 0-.216-.064-.4-.191-.558-.127-.159-.335-.304-.622-.44l-.894-.383c-.454-.191-.79-.47-1.006-.83-.215-.368-.32-.774-.32-1.222 0-.36.072-.678.215-.958.144-.279.335-.52.574-.718.24-.2.518-.35.838-.454.32-.104.655-.16 1.006-.16.144 0 .287.008.423.032.144.016.279.048.415.08.135.032.263.072.383.112.12.048.215.095.279.144.08.056.135.112.167.175.032.064.048.144.048.24v.263c0 .12-.048.184-.128.184-.056 0-.144-.024-.247-.08-.383-.183-.814-.272-1.295-.272-.44 0-.783.072-1.023.224-.24.151-.36.375-.36.67 0 .216.072.4.207.56.136.159.36.32.67.478l.878.383c.447.191.774.456.982.798.207.34.31.728.31 1.165 0 .375-.072.718-.215 1.023-.144.304-.335.566-.574.774-.24.207-.526.367-.862.478-.336.112-.702.168-1.093.168zm1.686-8.04c-.104 0-.16-.048-.16-.16 0-.032.008-.064.024-.104l.622-1.518c.032-.08.072-.135.112-.167.048-.032.104-.048.167-.048h.51c.104 0 .16.048.16.16 0 .032-.008.064-.024.104l-.622 1.518c-.032.08-.072.135-.112.167-.048.032-.104.048-.167.048h-.51zm-14.936 8.04c-.32 0-.646-.04-.966-.112-.32-.08-.568-.175-.75-.288-.08-.048-.135-.104-.151-.144-.016-.048-.024-.095-.024-.144v-.28c0-.12.048-.175.128-.175.048 0 .096.008.144.032.048.016.12.048.2.08.27.112.56.2.862.248.304.048.606.072.91.072.487 0 .862-.087 1.118-.264.256-.175.384-.423.384-.734 0-.216-.064-.4-.191-.558-.127-.159-.335-.304-.622-.44l-.894-.383c-.454-.191-.79-.47-1.006-.83-.215-.368-.32-.774-.32-1.222 0-.36.072-.678.215-.958.144-.279.335-.52.574-.718.24-.2.518-.35.838-.454.32-.104.655-.16 1.006-.16.144 0 .287.008.423.032.144.016.279.048.415.08.135.032.263.072.383.112.12.048.215.095.279.144.08.056.135.112.167.175.032.064.048.144.048.24v.263c0 .12-.048.184-.128.184-.056 0-.144-.024-.247-.08-.383-.183-.814-.272-1.295-.272-.44 0-.783.072-1.023.224-.24.151-.36.375-.36.67 0 .216.072.4.207.56.136.159.36.32.67.478l.878.383c.447.191.774.456.982.798.207.34.31.728.31 1.165 0 .375-.072.718-.215 1.023-.144.304-.335.566-.574.774-.24.207-.526.367-.862.478-.336.112-.702.168-1.093.168z"
+              d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335c-.072.048-.144.071-.2.071-.08 0-.16-.04-.239-.112-.112-.12-.207-.248-.279-.383-.072-.135-.144-.287-.2-.455-.503.592-1.135.888-1.887.888-.537 0-.967-.152-1.279-.457-.312-.304-.47-.71-.47-1.214 0-.537.19-.973.574-1.295.383-.32.894-.48 1.534-.48.214 0 .335.016.527.048.191.032.383.08.598.144v-.48c0-.5-.104-.85-.32-1.063-.215-.215-.58-.32-1.11-.32-.239 0-.487.032-.734.08-.248.048-.487.104-.718.184-.104.04-.183.064-.23.064-.08 0-.12-.056-.12-.175v-.271c0-.088.016-.16.056-.2.04-.048.112-.08.2-.112.247-.127.543-.232.886-.32.344-.087.71-.128 1.095-.128.838 0 1.454.191 1.846.574.394.384.59.966.59 1.75v2.302zm-2.592.927c.207 0 .422-.04.646-.112.224-.072.423-.2.59-.368.103-.111.175-.232.207-.36.032-.127.056-.28.056-.454v-.215c-.15-.04-.32-.072-.51-.096-.19-.023-.375-.032-.551-.032-.394 0-.686.08-.878.24-.191.159-.287.384-.287.67 0 .271.071.48.207.622.144.144.351.215.622.215zm4.846.718c-.103 0-.175-.016-.215-.056-.048-.04-.087-.12-.127-.24l-1.423-4.693c-.04-.135-.064-.224-.064-.271 0-.104.048-.16.151-.16h.622c.104 0 .175.016.215.056.048.04.08.12.112.24l1.015 4.001 .942-4.001c.032-.127.064-.2.112-.24.048-.04.12-.056.215-.056h.51c.104 0 .175.016.215.056.048.04.087.12.112.24l.95 4.049 1.047-4.049c.032-.127.072-.2.112-.24.048-.04.12-.056.215-.056h.59c.104 0 .16.048.16.16 0 .032-.008.064-.016.104-.008.04-.024.095-.048.16l-1.463 4.693c-.04.127-.08.2-.127.24-.048.04-.12.056-.215.056h-.55c-.103 0-.175-.016-.215-.056-.048-.04-.087-.12-.112-.24l-.934-3.89-.926 3.89c-.032.127-.064.2-.112.24-.048.04-.112.056-.215.056h-.55zm7.985.08c-.32 0-.646-.04-.966-.112-.32-.08-.568-.175-.75-.288-.08-.048-.135-.104-.151-.144-.016-.048-.024-.095-.024-.144v-.28c0-.12.048-.175.128-.175.048 0 .096.008.144.032.048.016.12.048.2.08.27.112.56.2.862.248.304.048.606.072.91.072.487 0 .862-.087 1.118-.264.256-.175.384-.423.384-.734 0-.216-.064-.4-.191-.558-.127-.159-.335-.304-.622-.44l-.894-.383c-.454-.191-.79-.47-1.006-.83-.215-.368-.32-.774-.32-1.222 0-.36.072-.678.215-.958.144-.279.335-.52.574-.718.24-.2.518-.35.838-.454.32-.104.655-.16 1.006-.16.144 0 .287.008.423.032.144.016.279.048.415.08.135.032.263.072.383.112.12.048.215.095.279.144.08.056.135.112.167.175.032.064.048.144.048.24v.263c0 .12-.048.184-.128.184-.056 0-.144-.024-.247-.08-.383-.183-.814-.272-1.295-.272-.44 0-.783.072-1.023.224-.24.151-.36.375-.36.67 0 .216.072.4.207.56.136.159.36.32.67.478l.878.383c.447.191.774.456.982.798.207.34.31.728.31 1.165 0 .375-.072.718-.215 1.023-.144.304-.335.566-.574.774-.24.207-.526.367-.862.478-.336.112-.702.168-1.093.168zm1.686-8.04c-.104 0-.16-.048-.16-.16 0-.032.008-.064.024-.104l.622-1.518c.032-.08.072-.135.112-.167.048-.032.104-.048.167-.048h.51c.104 0 .16.048.16.16 0 .032-.008.064-.024.104l-.622 1.518c-.032.08-.072.135-.112.167-.048.032-.104.048-.167.048h-.51zm-14.936 8.04c-.32 0-.646-.04-.966-.112-.32-.08-.568-.175-.75-.288-.08-.048-.135-.104-.151-.144-.016-.048-.024-.095-.024-.144v-.28c0-.12.048-.175.128-.175.048 0 .096.008.144.032.048.016.12.048.2.08.27.112.56.2.862.248.304.048.606.072.91.072.487 0 .862-.087 1.118-.264.256-.175.384-.423.384-.734 0-.216-.064-.4-.191-.558-.127-.159-.335-.304-.622-.44l-.894-.383c-.454-.191-.79-.47-1.006-.83-.215-.368-.32-.774-.32-1.222 0-.36.072-.678.215-.958.144-.279.335-.52.574-.718.24-.2.518-.35.838-.454.32-.104.655-.16 1.006-.16.144 0 .287.008.423.032.144.016.279.048.415.08.135.032.263.072.383.112.12.048.215.095.279.144.08.056.135.112.167.175.032.064.048.144.048.24v.263c0 .12-.048.184-.128.184-.056 0-.144-.024-.247-.08-.383-.183-.814-.272-1.295-.272-.44 0-.783.072-1.023.224-.24.151-.36.375-.36.67 0 .216.072.4.207.56.136.159.36.32.67.478l.878.383c.447.191.774.456.982.798.207.34.31.728.31 1.165 0 .375-.072.718-.215 1.023-.144.304-.335.566-.574.774-.24.207-.526.367-.862.478-.336.112-.702.168-1.093.168z"
               fill="currentColor"
             />
           </svg>
@@ -273,88 +284,175 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative">
-        <div className="container mx-auto px-6 text-center z-10 relative">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 relative">
-              <motion.span
-                className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-                style={{ backgroundSize: "200% 200%" }}
+        <div className="container mx-auto px-6 z-10 relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-left"
+            >
+              <motion.div
+                className="text-lg md:text-xl text-blue-400/80 mb-4 font-mono"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
               >
-                Software
-              </motion.span>
-              <br />
-              <motion.span className="text-white relative">
-                Engineer
+                Hi, my name is
+              </motion.div>
+
+              <h1 className="text-5xl md:text-7xl font-bold mb-4">
+                <motion.span
+                  className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  style={{ backgroundSize: "200% 200%" }}
+                >
+                  Alex Chen
+                </motion.span>
+              </h1>
+
+              <h2 className="text-3xl md:text-5xl font-bold text-white/80 mb-6">I build things for the web.</h2>
+
+              <motion.p
+                className="text-lg md:text-xl text-white/70 mb-8 max-w-lg leading-relaxed"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              >
+                I'm a 4th-year Computer Science student specializing in building exceptional digital experiences.
+                Currently focused on creating innovative web applications with modern technologies.
+              </motion.p>
+
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+              >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 pulse-glow"
+                    onClick={() => scrollToSection("projects")}
+                  >
+                    <Terminal className="w-5 h-5 mr-2" />
+                    View My Work
+                  </Button>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-blue-400/30 text-blue-400 hover:bg-blue-400/10 px-8 py-3 bg-transparent backdrop-blur-sm"
+                    onClick={downloadCV}
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Download CV
+                  </Button>
+                </motion.div>
+              </motion.div>
+
+              <motion.div
+                className="flex space-x-6"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 0.8 }}
+              >
+                {[
+                  { icon: Github, color: "hover:text-gray-400", href: "https://github.com" },
+                  { icon: Linkedin, color: "hover:text-blue-400", href: "https://linkedin.com" },
+                  { icon: Mail, color: "hover:text-green-400", href: "mailto:alex.chen@email.com" },
+                ].map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white/70 transition-all duration-300 ${social.color}`}
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <social.icon className="w-6 h-6" />
+                  </motion.a>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            {/* Right Side - Profile Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex justify-center lg:justify-end"
+            >
+              <div className="relative">
+                {/* Animated border */}
                 <motion.div
-                  className="absolute -right-4 top-0 w-1 h-full bg-blue-400"
-                  animate={{ opacity: [0, 1, 0] }}
-                  transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-                />
-              </motion.span>
-            </h1>
-
-            <motion.p
-              className="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-            >
-              4th Year Computer Science Student passionate about building innovative solutions and creating exceptional
-              digital experiences
-            </motion.p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-            >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 pulse-glow"
-                  onClick={() => scrollToSection("projects")}
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 p-1"
+                  animate={{
+                    rotate: 360,
+                  }}
+                  transition={{
+                    duration: 20,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
                 >
-                  <Terminal className="w-5 h-5 mr-2" />
-                  View My Work
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 px-8 py-3 bg-transparent backdrop-blur-sm"
-                  onClick={() => scrollToSection("contact")}
+                  <div className="w-full h-full rounded-full bg-slate-900" />
+                </motion.div>
+
+                {/* Profile Image */}
+                <motion.div
+                  className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-transparent"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <Zap className="w-5 h-5 mr-2" />
-                  Get In Touch
-                </Button>
-              </motion.div>
+                  <img
+                    src="/images/profile.jpg"
+                    alt="Alex Chen - Software Engineer"
+                    className="w-full h-full object-cover object-center"
+                    onError={(e) => {
+                      // Fallback to placeholder if image doesn't exist
+                      e.currentTarget.src = "/placeholder-user.jpg"
+                    }}
+                  />
+
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
+                </motion.div>
+
+                {/* Floating elements around image */}
+                <motion.div
+                  className="absolute -top-4 -right-4 w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Code className="w-6 h-6 text-blue-400" />
+                </motion.div>
+
+                <motion.div
+                  className="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+                  animate={{
+                    y: [0, 10, 0],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                >
+                  <Terminal className="w-6 h-6 text-purple-400" />
+                </motion.div>
+              </div>
             </motion.div>
-
-            <motion.div
-              className="flex justify-center space-x-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.8 }}
-            >
-              {[
-                { icon: Github, color: "hover:text-gray-400" },
-                { icon: Linkedin, color: "hover:text-blue-400" },
-                { icon: Mail, color: "hover:text-green-400" },
-              ].map((social, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  className={`p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white/70 transition-all duration-300 ${social.color}`}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <social.icon className="w-6 h-6" />
-                </motion.a>
-              ))}
-            </motion.div>
-          </motion.div>
+          </div>
         </div>
 
         <motion.div
