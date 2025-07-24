@@ -244,7 +244,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, x: 0 }}
               className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
             >
-              &lt;Alex Chen /&gt;
+              &lt;Dulan Imalka/&gt;
             </motion.div>
             <div className="hidden md:flex space-x-8">
               {["Home", "About", "Skills", "Projects", "Experience", "Contact"].map((item) => (
