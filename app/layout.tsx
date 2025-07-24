@@ -15,13 +15,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-qb-installed>
+    <html lang="en">
       <head>
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `html {\n  font-family: ${GeistSans.style.fontFamily};\n  --font-sans: ${GeistSans.variable};\n  --font-mono: ${GeistMono.variable};\n}`,
-          }}
-        />
+        <style>{`
+html {
+  font-family: ${GeistSans.style.fontFamily};
+  --font-sans: ${GeistSans.variable};
+  --font-mono: ${GeistMono.variable};
+}
+        `}</style>
       </head>
       <body>{children}</body>
     </html>
