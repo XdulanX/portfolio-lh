@@ -617,6 +617,7 @@ export default function Portfolio() {
                     "Developed a secure, scalable self-service portal featuring dual-source authentication (HRM & Active Directory) with SMS-OTP password flows. Designed APIs for IP-subnet management and dynamic email-request workflows with real-time status dashboards. ",
                   tech: ["Python (Flask)", "MySQL", "JavaScript", "Bootstrap", "SCSS", "Nginx"],
                   image: "/images/ceb.png?height=200&width=300",
+                  repo: "https://github.com/placeholder/employee-portal",
                 },
                 {
                   title: "DreamFit - Virtual Dressing Room",
@@ -624,6 +625,7 @@ export default function Portfolio() {
                     "Developed an innovative 3D fashion platform enabling real-time garment customization and virtual try-ons. Users personalize clothing items—like T-shirts, dresses, and trousers—with colors, images, and patterns through an intuitive and interactive interface, enhancing the online shopping experience.",
                   tech: ["React.js", "Three.js", "Node.js", "Express.js","MongoDB","Blender ","AI Chatbot"],
                   image: "/images/dreamfit.jpeg?height=200&width=300",
+                  repo: "https://github.com/placeholder/dreamfit",
                 },
                 {
                   title: "Kind Heart - Mobile App for SDG 1: No Poverty",
@@ -631,6 +633,7 @@ export default function Portfolio() {
                     "Built a mobile platform supporting SDG 1 (No Poverty) that connects donors, volunteers, and individuals in need. Features include community building, emergency services integration for timely assistance, and donor recognition to track impact. Implemented secure user authentication and focused on delivering a seamless, user-friendly experience to foster positive social change.",
                   tech: ["React Native", "Firebase", "Clerk"],
                   image: "/images/kindheart.jpeg?height=200&width=300",
+                  repo: "https://github.com/placeholder/kindheart",
                 },
 
                 {
@@ -639,6 +642,7 @@ export default function Portfolio() {
                     "Developed a responsive POS system for Anuja Super Mart as part of a university project. Created an intuitive UI with React and Bootstrap, delivering a smooth user experience. Implemented backend logic with Node.js and Express for efficient data handling and secure API communication. Leveraged React Vite for fast state management and improved app performance.",
                   tech: ["React", "Bootstrap,", "Node.js", "Express.js","Vite","Mongo DB"],
                   image: "/images/pos.jpeg?height=200&width=300",
+                  repo: "https://github.com/placeholder/pos-system",
                 },
 
                 {
@@ -647,6 +651,7 @@ export default function Portfolio() {
                     "Developed a comprehensive hospital management system to digitize healthcare services. Implemented role-based access for Admins, Doctors, and Patients, enabling efficient hospital operations, patient record management, and communication. Features include appointment scheduling with automated email notifications, prescription handling, and flexible payment options. Followed coding standards, design patterns, and rigorous testing to ensure maintainable, high-quality code.",
                   tech: ["MERN Stack", "Jest"],
                   image: "/images/helasuwa.jpeg?height=200&width=300",
+                  repo: "https://github.com/placeholder/helasuwa",
                 },
 
                 {
@@ -655,6 +660,7 @@ export default function Portfolio() {
                     "Currently building TrailOTales, a next-gen travel app that transforms every journey in Sri Lanka into a rich, immersive storytelling experience. Combining GPS-triggered audio narratives, ambient soundscapes, and cultural voicemoments, it guides users through nature trails, heritage sites, and hidden gems with deep local insight.",
                   tech: ["React Native", "GPS","Audio Streaming","Cloud Services"],
                   image: "/images/trelotails.png?height=200&width=300",
+                  repo: "https://github.com/placeholder/trailotales",
                 },
 
               ].map((project, index) => (
@@ -689,7 +695,13 @@ export default function Portfolio() {
                         ))}
                       </div>
                       <div className="flex gap-2">
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <motion.a
+                          href={project.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
                           <Button
                             size="sm"
                             variant="outline"
@@ -698,7 +710,7 @@ export default function Portfolio() {
                             <Github className="w-4 h-4 mr-2" />
                             Code
                           </Button>
-                        </motion.div>
+                        </motion.a>
 
                       </div>
                     </CardContent>
