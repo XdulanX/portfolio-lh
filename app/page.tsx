@@ -57,8 +57,8 @@ export default function Portfolio() {
   const downloadCV = () => {
     // Create a link element and trigger download
     const link = document.createElement("a")
-    link.href = "/cv/Alex_Chen_CV.pdf"
-    link.download = "Alex_Chen_CV.pdf"
+    link.href = "/cv/Dulan_Imalka_CV.pdf"
+    link.download = "Dulan_Imalka_CV.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -311,7 +311,7 @@ export default function Portfolio() {
                 </motion.span>
               </h1>
 
-              <h2 className="text-3xl md:text-5xl font-bold text-white/80 mb-6">I build things for the web.</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-white/80 mb-6">I create impactful digital experiences.</h2>
 
               <motion.p
                 className="text-lg md:text-xl text-white/70 mb-8 max-w-lg leading-relaxed"
@@ -319,8 +319,7 @@ export default function Portfolio() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                I'm a 4th-year Computer Science student specializing in building exceptional digital experiences.
-                Currently focused on creating innovative web applications with modern technologies.
+                I’m a Software Engineering student crafting next-generation digital experiences through modern web and mobile development.
               </motion.p>
 
               <motion.div
@@ -359,9 +358,9 @@ export default function Portfolio() {
                 transition={{ delay: 1, duration: 0.8 }}
               >
                 {[
-                  { icon: Github, color: "hover:text-gray-400", href: "https://github.com" },
-                  { icon: Linkedin, color: "hover:text-blue-400", href: "https://linkedin.com" },
-                  { icon: Mail, color: "hover:text-green-400", href: "mailto:alex.chen@email.com" },
+                  { icon: Github, color: "hover:text-gray-400", href: "https://github.com/XdulanX" },
+                  { icon: Linkedin, color: "hover:text-blue-400", href: "https://www.linkedin.com/in/dulan-imalka/" },
+                  { icon: Mail, color: "hover:text-green-400", href: "mailto:dulanimalka1@email.com" },
                 ].map((social, index) => (
                   <motion.a
                     key={index}
@@ -408,8 +407,8 @@ export default function Portfolio() {
                   transition={{ duration: 0.3 }}
                 >
                   <img
-                    src="/images/profile.jpg"
-                    alt="Alex Chen - Software Engineer"
+                    src="/images/Subject.png"
+                    alt="Dulan Imalka - Software Engineer"
                     className="w-full h-full object-cover object-center"
                     onError={(e) => {
                       // Fallback to placeholder if image doesn't exist
@@ -485,7 +484,7 @@ export default function Portfolio() {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                I'm a passionate 4th-year Computer Science student with a deep love for technology and innovation. My
+                I'm a Information Technology student specializing in Software Engineering with a deep love for technology and innovation. My
                 journey in software development has been driven by curiosity and the desire to solve real-world problems
                 through code. I specialize in full-stack development with expertise in modern web technologies.
               </motion.p>
@@ -494,21 +493,21 @@ export default function Portfolio() {
                   {
                     icon: Code,
                     title: "Frontend Development",
-                    desc: "React, Next.js, TypeScript, Tailwind CSS",
+                    desc: "React.js, React Native, TypeScript, JavaScript, HTML/CSS, Tailwind CSS, Bootstrap",
                     color: "text-blue-400",
                     bgColor: "bg-blue-500/10",
                   },
                   {
                     icon: Server,
                     title: "Backend Development",
-                    desc: "Node.js, Express, Python, Java",
+                    desc: "Python (Flask), Node.js, Express, Spring Boot, Java, PHP",
                     color: "text-purple-400",
                     bgColor: "bg-purple-500/10",
                   },
                   {
                     icon: Database,
                     title: "Database & Cloud",
-                    desc: "MongoDB, PostgreSQL, AWS, Docker",
+                    desc: "MongoDB, MySQL, Firebase, Docker, Kubernetes, Microservices, Kafka",
                     color: "text-pink-400",
                     bgColor: "bg-pink-500/10",
                   },
@@ -557,12 +556,16 @@ export default function Portfolio() {
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8">
                 {[
-                  { name: "JavaScript/TypeScript", level: 90, color: "from-yellow-400 to-orange-400" },
-                  { name: "React/Next.js", level: 85, color: "from-blue-400 to-cyan-400" },
-                  { name: "Node.js/Express", level: 80, color: "from-green-400 to-emerald-400" },
-                  { name: "Python", level: 75, color: "from-blue-500 to-indigo-500" },
-                  { name: "MongoDB/PostgreSQL", level: 70, color: "from-purple-400 to-pink-400" },
-                  { name: "AWS/Docker", level: 65, color: "from-orange-400 to-red-400" },
+                 
+                      { name: "JavaScript/TypeScript", level: 90, color: "from-yellow-400 to-orange-400" },
+                      { name: "React.js/React Native", level: 85, color: "from-blue-400 to-cyan-400" },
+                      { name: "Node.js/Express", level: 80, color: "from-green-400 to-emerald-400" },
+                      { name: "Python (Flask)", level: 75, color: "from-blue-500 to-indigo-500" },
+                      { name: "MongoDB/MySQL", level: 80, color: "from-purple-400 to-pink-400" },
+                      { name: "Spring Boot/Java", level: 70, color: "from-teal-400 to-cyan-400" },
+                      { name: "Docker/Kubernetes", level: 65, color: "from-orange-400 to-red-400" },
+
+
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
@@ -609,26 +612,51 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "E-Commerce Platform",
+                  title: "Employee Self Service Portal",
                   description:
-                    "Full-stack MERN application with payment integration, user authentication, and admin dashboard.",
-                  tech: ["React", "Node.js", "MongoDB", "Stripe"],
-                  image: "/placeholder.svg?height=200&width=300",
+                    "Developed a secure, scalable self-service portal featuring dual-source authentication (HRM & Active Directory) with SMS-OTP password flows. Designed APIs for IP-subnet management and dynamic email-request workflows with real-time status dashboards. ",
+                  tech: ["Python (Flask)", "MySQL", "JavaScript", "Bootstrap", "SCSS", "Nginx"],
+                  image: "/images/ceb.png?height=200&width=300",
                 },
                 {
-                  title: "Task Management App",
+                  title: "DreamFit - Virtual Dressing Room",
                   description:
-                    "Collaborative project management tool with real-time updates and team collaboration features.",
-                  tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
-                  image: "/placeholder.svg?height=200&width=300",
+                    "Developed an innovative 3D fashion platform enabling real-time garment customization and virtual try-ons. Users personalize clothing items—like T-shirts, dresses, and trousers—with colors, images, and patterns through an intuitive and interactive interface, enhancing the online shopping experience.",
+                  tech: ["React.js", "Three.js", "Node.js", "Express.js","MongoDB","Blender ","AI Chatbot"],
+                  image: "/images/dreamfit.jpeg?height=200&width=300",
                 },
                 {
-                  title: "AI Chat Application",
+                  title: "Kind Heart - Mobile App for SDG 1: No Poverty",
                   description:
-                    "Intelligent chatbot with natural language processing and machine learning capabilities.",
-                  tech: ["Python", "TensorFlow", "Flask", "React"],
-                  image: "/placeholder.svg?height=200&width=300",
+                    "Built a mobile platform supporting SDG 1 (No Poverty) that connects donors, volunteers, and individuals in need. Features include community building, emergency services integration for timely assistance, and donor recognition to track impact. Implemented secure user authentication and focused on delivering a seamless, user-friendly experience to foster positive social change.",
+                  tech: ["React Native", "Firebase", "Clerk"],
+                  image: "/images/kindheart.jpeg?height=200&width=300",
                 },
+
+                {
+                  title: "Point Of Sales System (Anuja SuperMart)",
+                  description:
+                    "Developed a responsive POS system for Anuja Super Mart as part of a university project. Created an intuitive UI with React and Bootstrap, delivering a smooth user experience. Implemented backend logic with Node.js and Express for efficient data handling and secure API communication. Leveraged React Vite for fast state management and improved app performance.",
+                  tech: ["React", "Bootstrap,", "Node.js", "Express.js","Vite","Mongo DB"],
+                  image: "/images/pos.jpeg?height=200&width=300",
+                },
+
+                {
+                  title: "Helasuwa - Hospital Management System",
+                  description:
+                    "Developed a comprehensive hospital management system to digitize healthcare services. Implemented role-based access for Admins, Doctors, and Patients, enabling efficient hospital operations, patient record management, and communication. Features include appointment scheduling with automated email notifications, prescription handling, and flexible payment options. Followed coding standards, design patterns, and rigorous testing to ensure maintainable, high-quality code.",
+                  tech: ["MERN Stack", "Jest"],
+                  image: "/images/helasuwa.jpeg?height=200&width=300",
+                },
+
+                {
+                  title: "TrailOTales – Immersive Travel Companion (In Development)",
+                  description:
+                    "Currently building TrailOTales, a next-gen travel app that transforms every journey in Sri Lanka into a rich, immersive storytelling experience. Combining GPS-triggered audio narratives, ambient soundscapes, and cultural voicemoments, it guides users through nature trails, heritage sites, and hidden gems with deep local insight.",
+                  tech: ["React Native", "GPS","Audio Streaming","Cloud Services"],
+                  image: "/images/trelotails.png?height=200&width=300",
+                },
+
               ].map((project, index) => (
                 <motion.div
                   key={project.title}
@@ -671,12 +699,7 @@ export default function Portfolio() {
                             Code
                           </Button>
                         </motion.div>
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                          <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Demo
-                          </Button>
-                        </motion.div>
+
                       </div>
                     </CardContent>
                   </Card>
@@ -817,7 +840,7 @@ export default function Portfolio() {
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 pulse-glow"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  alex.chen@email.com
+                  dulanimalka1@gmail.com.com
                 </Button>
               </motion.div>
               <div className="flex gap-4">
@@ -844,7 +867,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 border-t border-white/10 relative">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-white/60">© 2024 Alex Chen. Built with Next.js and Tailwind CSS.</p>
+          <p className="text-white/60">© 2025 Dulan Imalka. Built with Next.js and Tailwind CSS.</p>
         </div>
       </footer>
     </div>
