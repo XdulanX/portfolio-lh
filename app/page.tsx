@@ -614,6 +614,7 @@ export default function Portfolio() {
                     "Full-stack MERN application with payment integration, user authentication, and admin dashboard.",
                   tech: ["React", "Node.js", "MongoDB", "Stripe"],
                   image: "/placeholder.svg?height=200&width=300",
+                  codeLink: "https://github.com/example/ecommerce",
                 },
                 {
                   title: "Task Management App",
@@ -621,6 +622,7 @@ export default function Portfolio() {
                     "Collaborative project management tool with real-time updates and team collaboration features.",
                   tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
                   image: "/placeholder.svg?height=200&width=300",
+                  codeLink: "https://github.com/example/task-manager",
                 },
                 {
                   title: "AI Chat Application",
@@ -628,6 +630,7 @@ export default function Portfolio() {
                     "Intelligent chatbot with natural language processing and machine learning capabilities.",
                   tech: ["Python", "TensorFlow", "Flask", "React"],
                   image: "/placeholder.svg?height=200&width=300",
+                  codeLink: "https://github.com/example/ai-chat",
                 },
               ].map((project, index) => (
                 <motion.div
@@ -661,7 +664,13 @@ export default function Portfolio() {
                         ))}
                       </div>
                       <div className="flex gap-2">
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <motion.a
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          href={project.codeLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Button
                             size="sm"
                             variant="outline"
@@ -670,7 +679,7 @@ export default function Portfolio() {
                             <Github className="w-4 h-4 mr-2" />
                             Code
                           </Button>
-                        </motion.div>
+                        </motion.a>
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                           <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600">
                             <ExternalLink className="w-4 h-4 mr-2" />
