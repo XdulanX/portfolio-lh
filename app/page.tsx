@@ -611,21 +611,14 @@ export default function Portfolio() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Employee Self Service Portal",
-                  description:
-                    "Developed a secure, scalable self-service portal featuring dual-source authentication (HRM & Active Directory) with SMS-OTP password flows. Designed APIs for IP-subnet management and dynamic email-request workflows with real-time status dashboards. ",
-                  tech: ["Python (Flask)", "MySQL", "JavaScript", "Bootstrap", "SCSS", "Nginx"],
-                  image: "/images/ceb.png?height=200&width=300",
-                  repo: "https://github.com/placeholder/employee-portal",
-                },
+               
                 {
                   title: "DreamFit - Virtual Dressing Room",
                   description:
                     "Developed an innovative 3D fashion platform enabling real-time garment customization and virtual try-ons. Users personalize clothing items—like T-shirts, dresses, and trousers—with colors, images, and patterns through an intuitive and interactive interface, enhancing the online shopping experience.",
                   tech: ["React.js", "Three.js", "Node.js", "Express.js","MongoDB","Blender ","AI Chatbot"],
                   image: "/images/dreamfit.jpeg?height=200&width=300",
-                  repo: "https://github.com/placeholder/dreamfit",
+                  repo: "https://github.com/XdulanX/DreamFit.lk-Research.git",
                 },
                 {
                   title: "Kind Heart - Mobile App for SDG 1: No Poverty",
@@ -633,7 +626,7 @@ export default function Portfolio() {
                     "Built a mobile platform supporting SDG 1 (No Poverty) that connects donors, volunteers, and individuals in need. Features include community building, emergency services integration for timely assistance, and donor recognition to track impact. Implemented secure user authentication and focused on delivering a seamless, user-friendly experience to foster positive social change.",
                   tech: ["React Native", "Firebase", "Clerk"],
                   image: "/images/kindheart.jpeg?height=200&width=300",
-                  repo: "https://github.com/placeholder/kindheart",
+                  repo: "https://github.com/XdulanX/KindHeart-UEE.git",
                 },
 
                 {
@@ -642,7 +635,7 @@ export default function Portfolio() {
                     "Developed a responsive POS system for Anuja Super Mart as part of a university project. Created an intuitive UI with React and Bootstrap, delivering a smooth user experience. Implemented backend logic with Node.js and Express for efficient data handling and secure API communication. Leveraged React Vite for fast state management and improved app performance.",
                   tech: ["React", "Bootstrap,", "Node.js", "Express.js","Vite","Mongo DB"],
                   image: "/images/pos.jpeg?height=200&width=300",
-                  repo: "https://github.com/placeholder/pos-system",
+                  repo: "https://github.com/XdulanX/Anuja_Super_Mart_POS_System.git",
                 },
 
                 {
@@ -651,7 +644,7 @@ export default function Portfolio() {
                     "Developed a comprehensive hospital management system to digitize healthcare services. Implemented role-based access for Admins, Doctors, and Patients, enabling efficient hospital operations, patient record management, and communication. Features include appointment scheduling with automated email notifications, prescription handling, and flexible payment options. Followed coding standards, design patterns, and rigorous testing to ensure maintainable, high-quality code.",
                   tech: ["MERN Stack", "Jest"],
                   image: "/images/helasuwa.jpeg?height=200&width=300",
-                  repo: "https://github.com/placeholder/helasuwa",
+                  repo: "https://github.com/XdulanX/Helasuwa.lk.git",
                 },
 
                 {
@@ -660,7 +653,15 @@ export default function Portfolio() {
                     "Currently building TrailOTales, a next-gen travel app that transforms every journey in Sri Lanka into a rich, immersive storytelling experience. Combining GPS-triggered audio narratives, ambient soundscapes, and cultural voicemoments, it guides users through nature trails, heritage sites, and hidden gems with deep local insight.",
                   tech: ["React Native", "GPS","Audio Streaming","Cloud Services"],
                   image: "/images/trelotails.png?height=200&width=300",
-                  repo: "https://github.com/placeholder/trailotales",
+                  repo: "https://github.com/sandaruwanbasnayake/ceylontrails.git",
+                },
+                 {
+                  title: "Employee Self Service Portal",
+                  description:
+                    "Developed a secure, scalable self-service portal featuring dual-source authentication (HRM & Active Directory) with SMS-OTP password flows. Designed APIs for IP-subnet management and dynamic email-request workflows with real-time status dashboards. ",
+                  tech: ["Python (Flask)", "MySQL", "JavaScript", "Bootstrap", "SCSS", "Nginx"],
+                  image: "/images/ceb.png?height=200&width=300",
+                  repo: "https://github.com/sandaruwanbasnayake/selfservice-uat.git",
                 },
 
               ].map((project, index) => (
@@ -722,159 +723,174 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-20 relative">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Experience & Education
-            </h2>
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-8">
-                {[
-                  {
-                    title: "Software Development Intern",
-                    company: "TechCorp Solutions",
-                    period: "Jun 2024 - Aug 2024",
-                    location: "San Francisco, CA",
-                    description:
-                      "Developed and maintained web applications using React and Node.js. Collaborated with senior developers on feature implementation and bug fixes.",
-                    type: "work",
-                  },
-                  {
-                    title: "Bachelor of Science in Computer Science",
-                    company: "University of Technology",
-                    period: "2021 - 2025 (Expected)",
-                    location: "California, USA",
-                    description:
-                      "Relevant coursework: Data Structures, Algorithms, Database Systems, Software Engineering, Machine Learning. GPA: 3.8/4.0",
-                    type: "education",
-                  },
-                  {
-                    title: "Frontend Developer",
-                    company: "StartupXYZ",
-                    period: "Jan 2024 - May 2024",
-                    location: "Remote",
-                    description:
-                      "Built responsive web interfaces and improved user experience. Worked with design team to implement pixel-perfect UI components.",
-                    type: "work",
-                  },
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                    className="relative"
-                  >
-                    <motion.div whileHover={{ scale: 1.01 }}>
-                      <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                        <CardContent className="p-6">
-                          <div className="flex items-start gap-4">
-                            <div
-                              className={`p-3 rounded-full ${
-                                item.type === "work" ? "bg-blue-500/20" : "bg-purple-500/20"
-                              }`}
-                            >
-                              {item.type === "work" ? (
-                                <Cpu className="w-6 h-6 text-blue-400" />
-                              ) : (
-                                <Award className="w-6 h-6 text-purple-400" />
-                              )}
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="text-xl font-semibold text-white mb-1">{item.title}</h3>
-                              <p className="text-blue-400 font-medium mb-2">{item.company}</p>
-                              <div className="flex items-center gap-4 text-white/60 text-sm mb-3">
-                                <span className="flex items-center gap-1">
-                                  <Calendar className="w-4 h-4" />
-                                  {item.period}
-                                </span>
-                                <span className="flex items-center gap-1">
-                                  <MapPin className="w-4 h-4" />
-                                  {item.location}
-                                </span>
-                              </div>
-                              <p className="text-white/80">{item.description}</p>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-black/20 relative">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Let's Connect
-            </h2>
-            <motion.p
-              className="text-xl text-white/80 mb-12 max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              I'm always open to discussing new opportunities, interesting projects, or just having a chat about
-              technology.
-            </motion.p>
+     {/* Experience Section */}
+<section id="experience" className="py-20 relative">
+  <div className="container mx-auto px-6">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Experience & Education
+      </h2>
+      <div className="max-w-4xl mx-auto">
+        <div className="space-y-8">
+          {[
+            {
+              title: "Software Development Intern",
+              company: "Ceylon Electricity Board",
+              period: "Nov 2024 - May 2025",
+              location: "Sri Lanka",
+              description:
+                "Developed backend services and RESTful APIs using Python Flask for employee email and Active Directory provisioning. Created subnet management APIs and role-based UI dashboards. Collaborated closely with team in an Agile environment.",
+              type: "work",
+            },
+            {
+              title: "Bachelor of Science (Hons) in Information Technology",
+              company: "Sri Lanka Institute of Information Technology (SLIIT)",
+              period: "2022 - Present",
+              location: "Sri Lanka",
+              description:
+                "Specializing in Software Engineering. Relevant coursework includes Software Engineering, Database Systems, Web & Mobile Development, and Cloud Computing.",
+              type: "education",
+            },
+            {
+              title: "Advanced Level (A/L)",
+              company: "Isipathana College – Colombo",
+              period: "2020",
+              location: "Sri Lanka",
+              description: "Completed Advanced Level education with focus on science stream subjects.",
+              type: "education",
+            },
+          ].map((item, index) => (
             <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
+              className="relative"
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 pulse-glow"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  dulanimalka1@gmail.com.com
-                </Button>
+              <motion.div whileHover={{ scale: 1.01 }}>
+                <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div
+                        className={`p-3 rounded-full ${
+                          item.type === "work" ? "bg-blue-500/20" : "bg-purple-500/20"
+                        }`}
+                      >
+                        {item.type === "work" ? (
+                          <Cpu className="w-6 h-6 text-blue-400" />
+                        ) : (
+                          <Award className="w-6 h-6 text-purple-400" />
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-white mb-1">{item.title}</h3>
+                        <p className="text-blue-400 font-medium mb-2">{item.company}</p>
+                        <div className="flex items-center gap-4 text-white/60 text-sm mb-3">
+                          <span className="flex items-center gap-1">
+                            <Calendar className="w-4 h-4" />
+                            {item.period}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <MapPin className="w-4 h-4" />
+                            {item.location}
+                          </span>
+                        </div>
+                        <p className="text-white/80">{item.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
-              <div className="flex gap-4">
-                {[
-                  { icon: Github, color: "hover:bg-gray-600/20" },
-                  { icon: Linkedin, color: "hover:bg-blue-600/20" },
-                ].map((social, index) => (
-                  <motion.div key={index} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className={`border-white/30 text-white bg-transparent backdrop-blur-sm ${social.color} transition-all duration-300`}
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </Button>
-                  </motion.div>
-                ))}
-              </div>
             </motion.div>
-          </motion.div>
+          ))}
         </div>
-      </section>
+      </div>
+    </motion.div>
+  </div>
+</section>
+{/* Contact Section */}
+<section id="contact" className="py-20 bg-black/20 relative">
+  <div className="container mx-auto px-6">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Let's Connect
+      </h2>
+      <motion.p
+        className="text-xl text-white/80 mb-12 max-w-2xl mx-auto"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        I'm always open to discussing new opportunities, interesting projects, or just having a chat about
+        technology.
+      </motion.p>
+      <motion.div
+        className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <a href="mailto:dulanimalka1@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Send Email">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 pulse-glow"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              dulanimalka1@gmail.com
+            </Button>
+          </a>
+        </motion.div>
+        <div className="flex gap-4">
+          {[
+            {
+              icon: Github,
+              color: "hover:bg-gray-600/20",
+              href: "https://github.com/XdulanX",
+              label: "GitHub Profile",
+            },
+            {
+              icon: Linkedin,
+              color: "hover:bg-blue-600/20",
+              href: "https://www.linkedin.com/in/dulan-imalka/",
+              label: "LinkedIn Profile",
+            },
+          ].map(({ icon: Icon, color, href, label }, index) => (
+            <motion.a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className={`p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white/70 transition-all duration-300 ${color}`}
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Icon className="w-6 h-6" />
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
+
+
 
       {/* Footer */}
       <footer className="py-8 border-t border-white/10 relative">
