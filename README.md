@@ -1,30 +1,65 @@
-# Innovative portfolio design
+# Dulan Imalka - Portfolio
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Welcome to my personal portfolio website!  
+This site showcases my skills, projects, experience, and contact information as a Software Engineering student and developer.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/xdulanxs-projects/v0-innovative-portfolio-design)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/hktXhBkBftB)
+## About
 
-## Overview
+I am a passionate Software Engineering undergraduate specializing in building impactful web and mobile applications using modern technologies such as React.js, Next.js, React Native, Python Flask, and more.  
+This portfolio highlights my journey, key projects, and technical expertise.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Features
 
-## Deployment
+- Responsive and modern UI built with React and Tailwind CSS  
+- Animated sections using Framer Motion for smooth user experience  
+- Showcase of featured projects with tech stacks and descriptions  
+- Experience & education timeline  
+- Contact section with email and social media links  
+- Downloadable CV
 
-Your project is live at:
+## Technologies Used
 
-**[https://vercel.com/xdulanxs-projects/v0-innovative-portfolio-design](https://vercel.com/xdulanxs-projects/v0-innovative-portfolio-design)**
+- **Frontend:** React, Next.js, Tailwind CSS, Framer Motion  
+- **Mobile:** React Native  
+- **Backend:** Python Flask (for internship projects)  
+- **Hosting:** Vercel (deployment platform)  
+- **Version Control:** Git & GitHub
 
-## Build your app
+## Getting Started
 
-Continue building your app on:
+### Prerequisites
 
-**[https://v0.dev/chat/projects/hktXhBkBftB](https://v0.dev/chat/projects/hktXhBkBftB)**
+- Node.js (v16 or higher recommended)  
+- npm or yarn package manager
 
-## How It Works
+### Installation
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/XdulanX/portfolio-lh.git
+
+Navigate into the project directory
+
+bash
+Copy
+cd portfolio-lh
+Install dependencies
+
+bash
+Copy
+npm install
+Run the development server
+
+bash
+Copy
+npm run dev
+Open http://localhost:3000 to view in browser
+
+Build for Production
+bash
+Copy
+npm run build
+npm start
+
+### This portfolio is deployed on Vercel. You can view the live site at:
+- https://portfolio-lh-kohl.vercel.app/
